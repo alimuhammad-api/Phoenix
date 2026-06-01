@@ -77,6 +77,14 @@ export function StoryModal({ g, onClose }) {
         <div className="sample" dangerouslySetInnerHTML={{ __html: g.sample }}></div>
         <div style={{ display: "flex", gap: 12, marginTop: 26, flexWrap: "wrap" }}>
           <a className="btn btn--red" href="#stories" onClick={onClose}>Download {g.count} stories (PDF) <span className="arrow">→</span></a>
+          <a className="btn btn--green" href="#stories" onClick={onClose}>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M11 5 6 9H3v6h3l5 4z" />
+              <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+              <path d="M18.5 6a8 8 0 0 1 0 12" />
+            </svg>
+            Download audio
+          </a>
           <a className="btn btn--ghost" href="#stories" onClick={onClose}>View teacher notes</a>
         </div>
       </div>
