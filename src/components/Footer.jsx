@@ -107,7 +107,15 @@ export function Footer({ onNav }) {
           </div>
         </div>
         <div className="footer__bottom">
-          <small>Open Source Phonics © 2026 · Made for every reader.</small>
+          <small>
+            Open Source Phonics © 2026 · Made for every reader.
+            <span style={{ display: "block", marginTop: 4 }}>
+              Site by{" "}
+              <a href="https://agencypartner.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline", padding: 0 }}>
+                Agency Partner Interactive | Web Design &amp; Development Agency
+              </a>
+            </span>
+          </small>
           <div style={{ display: "flex", gap: 18 }}>
             <a href="#top" onClick={(e) => { e.preventDefault(); onNav("top"); }} style={{ padding: 0 }}>Terms</a>
             <a href="#top" onClick={(e) => { e.preventDefault(); onNav("top"); }} style={{ padding: 0 }}>Privacy</a>
