@@ -3,7 +3,11 @@ import { useState, useEffect } from "react";
 import { groups, colorVar } from "../data.js";
 
 export function Logomark({ style }) {
-  return <div className="nav__logomark" style={{ ...style, backgroundColor: "rgb(63, 75, 224)" }}>a</div>;
+  return (
+    <div className="nav__logomark" style={{ ...style, backgroundColor: "var(--card)", padding: 5 }}>
+      <img src="/favicon.svg" alt="Open Source Phonics" style={{ width: "100%", height: "100%" }} />
+    </div>
+  );
 }
 
 export default function Nav({ active, onNav }) {

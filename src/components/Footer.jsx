@@ -78,7 +78,9 @@ export function Footer({ onNav }) {
       <div className="wrap">
         <div className="footer__grid">
           <div className="footer__brand">
-            <div className="nav__logomark" style={{ transform: "rotate(-4deg)" }}>a</div>
+            <div className="nav__logomark" style={{ transform: "rotate(-4deg)", backgroundColor: "var(--card)", padding: 5 }}>
+              <img src="/favicon.svg" alt="Open Source Phonics" style={{ width: "100%", height: "100%" }} />
+            </div>
             <p style={{ marginTop: 8, fontFamily: "var(--ff-display)", fontWeight: 800, fontSize: 20, color: "var(--paper)" }}>Open Source Phonics</p>
             <p>Free, high-quality phonics materials for teachers, tutors, and families. Literacy is a civil right.</p>
             <a className="btn btn--gold btn--sm" style={{ marginTop: 12, margin: "12px 0px 0px", padding: "12px 0px 12px 24px", textAlign: "left", color: "rgb(0, 0, 0)", backgroundColor: "rgb(241, 177, 42)" }} href="#stories" onClick={(e) => { e.preventDefault(); onNav("stories"); }}><span style={{ color: "#211a14" }}>Get materials →</span></a>
