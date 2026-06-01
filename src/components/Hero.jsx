@@ -101,15 +101,9 @@ export function Mission() {
     <section className="mission" id="who" style={{ backgroundColor: "rgb(20, 24, 33)" }}>
       <div className="wrap mission__inner">
         <div>
-          <span className="eyebrow" style={{ color: "rgb(67, 211, 219)" }}>Our mission</span>
+          <span className="eyebrow" style={{ color: "#ffffff" }}>Our mission</span>
           <h2 style={{ marginTop: 16 }}>
-            Literacy is a{" "}
-            <span className="u-underline" style={{ color: "#ffffff" }}>
-              civil right.
-              <svg className="u-underline__svg" viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M4 11 Q 55 3 110 9 T 216 8" stroke="var(--gold)" strokeWidth="6" fill="none" strokeLinecap="round" />
-              </svg>
-            </span>
+            Literacy is a <span className="mark" style={{ color: "#ffffff" }}><span>civil right.</span></span>
           </h2>
           <p style={{ marginTop: 18 }}>
             The research supporting phonics is too strong to ignore — yet quality programs for struggling readers are long and expensive. We make them open, so every teacher, tutor, and family can reach the kids who need more practice.
