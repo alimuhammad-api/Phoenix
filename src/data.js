@@ -34,14 +34,11 @@ export const img = {
 
 export const endorsements = [
   { quote: "What a service to the world of reading instruction! It's comprehensive, clear, systematic, cumulative, and explicit. The scope and sequence is as good as any phonics program out there, and the quality and amount of decodable text practice is exceptional.",
-    name: "Dr. Louisa Moats", role: "Literacy expert & author of LETRS", initials: "LM", color: "var(--green)",
-    avatar: { bg: "var(--hl-green)", clothes: "var(--green)", skin: "#f1c79b", hair: "#7a5230", hairStyle: "bob" } },
+    name: "Dr. Louisa Moats", role: "Literacy expert & author of LETRS", color: "var(--green)", photo: "/avatars/moats.jpg" },
   { quote: "I whole-heartedly support initiatives like this one that work to provide high-quality literacy materials to all teachers and readers. I confirm their alignment with evidence-based structured literacy instruction.",
-    name: "Emily Cantrell", role: "Clinical Associate Professor, Texas A&M University", initials: "EC", color: "var(--red)",
-    avatar: { bg: "var(--hl-red)", clothes: "var(--red)", skin: "#e7b083", hair: "#2c1d12", hairStyle: "long" } },
+    name: "Emily Cantrell", role: "Clinical Associate Professor, Texas A&M University", color: "var(--red)", photo: "/avatars/cantrell.jpg" },
   { quote: "Every child deserves the best opportunity to learn to read, and decodable texts let students apply the phonics patterns they've been taught instead of guessing. This is a real step in that direction.",
-    name: "Structured Literacy Review", role: "Evidence-based reading practice", initials: "SL", color: "var(--blue)",
-    avatar: { bg: "#cfe0fb", clothes: "var(--blue)", skin: "#d4915f", hair: "#1f1a14", hairStyle: "short" } },
+    name: "Structured Literacy Review", role: "Evidence-based reading practice", color: "var(--blue)", photo: "/avatars/review.jpg" },
 ];
 
 /* "Reviewed against" chips for the endorsements footer */

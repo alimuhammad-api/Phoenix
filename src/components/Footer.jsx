@@ -2,26 +2,6 @@
 import { useState } from "react";
 import { groups, colorVar, endorsements, reviewedAgainst } from "../data.js";
 
-/* Friendly illustrated avatar, palette-driven per endorser */
-function Avatar({ a }) {
-  const hair = {
-    bob:   "M14 25 C 14 9 42 9 42 25 C 44 19 43 12 28 12 C 13 12 12 19 14 25 Z",
-    long:  "M13 30 C 11 9 45 9 43 30 L 43 20 C 43 11 35 10 28 10 C 21 10 13 11 13 20 Z",
-    short: "M15 22 C 15 11 41 11 41 22 C 41 17 38 13 28 13 C 18 13 15 17 15 22 Z",
-  }[a.hairStyle];
-  return (
-    <svg className="quote__av" viewBox="0 0 56 56" aria-hidden="true">
-      <defs><clipPath id={"clip-" + a.hairStyle}><circle cx="28" cy="28" r="26" /></clipPath></defs>
-      <circle cx="28" cy="28" r="26" fill={a.bg} stroke="#211a14" strokeWidth="2.5" />
-      <g clipPath={`url(#clip-${a.hairStyle})`}>
-        <path d="M9 56 C 9 41 19 36 28 36 C 37 36 47 41 47 56 Z" fill={a.clothes} />
-        <circle cx="28" cy="25" r="11" fill={a.skin} />
-        <path d={hair} fill={a.hair} />
-      </g>
-    </svg>
-  );
-}
-
 export function Endorsements() {
   const items = endorsements;
   const [i, setI] = useState(0);
@@ -40,7 +20,7 @@ export function Endorsements() {
           <div className="quote__mark">“</div>
           <p>{e.quote}</p>
           <div className="quote__by">
-            <Avatar a={e.avatar} />
+            <img className="quote__av" src={e.photo} alt={e.name} loading="lazy" width="56" height="56" />
             <div><b>{e.name}</b><span>{e.role}</span></div>
           </div>
         </div>
