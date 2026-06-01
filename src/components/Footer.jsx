@@ -1,6 +1,26 @@
 /* Endorsements slider + Final CTA + Footer */
 import { useState } from "react";
-import { groups, colorVar, endorsements } from "../data.js";
+import { groups, colorVar, endorsements, reviewedAgainst } from "../data.js";
+
+/* Friendly illustrated avatar, palette-driven per endorser */
+function Avatar({ a }) {
+  const hair = {
+    bob:   "M14 25 C 14 9 42 9 42 25 C 44 19 43 12 28 12 C 13 12 12 19 14 25 Z",
+    long:  "M13 30 C 11 9 45 9 43 30 L 43 20 C 43 11 35 10 28 10 C 21 10 13 11 13 20 Z",
+    short: "M15 22 C 15 11 41 11 41 22 C 41 17 38 13 28 13 C 18 13 15 17 15 22 Z",
+  }[a.hairStyle];
+  return (
+    <svg className="quote__av" viewBox="0 0 56 56" aria-hidden="true">
+      <defs><clipPath id={"clip-" + a.hairStyle}><circle cx="28" cy="28" r="26" /></clipPath></defs>
+      <circle cx="28" cy="28" r="26" fill={a.bg} stroke="#211a14" strokeWidth="2.5" />
+      <g clipPath={`url(#clip-${a.hairStyle})`}>
+        <path d="M9 56 C 9 41 19 36 28 36 C 37 36 47 41 47 56 Z" fill={a.clothes} />
+        <circle cx="28" cy="25" r="11" fill={a.skin} />
+        <path d={hair} fill={a.hair} />
+      </g>
+    </svg>
+  );
+}
 
 export function Endorsements() {
   const items = endorsements;
@@ -20,7 +40,7 @@ export function Endorsements() {
           <div className="quote__mark">“</div>
           <p>{e.quote}</p>
           <div className="quote__by">
-            <div className="quote__av" style={{ background: e.color }}>{e.initials}</div>
+            <Avatar a={e.avatar} />
             <div><b>{e.name}</b><span>{e.role}</span></div>
           </div>
         </div>
@@ -36,11 +56,10 @@ export function Endorsements() {
         </div>
 
         <div className="logos">
-          <span>As reviewed against</span>
-          <span>• LETRS principles</span>
-          <span>• Structured Literacy</span>
-          <span>• The Science of Reading</span>
-          <span>• Orton-Gillingham approach</span>
+          <span className="logos__label">As reviewed against</span>
+          {reviewedAgainst.map((r) => (
+            <span key={r.label} className="logo-chip" style={{ background: r.color, color: r.text }}>{r.label}</span>
+          ))}
         </div>
       </div>
     </section>
@@ -52,8 +71,6 @@ export function FinalCTA({ onNav }) {
     <section className="finalcta">
       <div className="wrap">
         <div className="finalcta__box" style={{ backgroundColor: "rgb(63, 75, 224)" }}>
-          <span className="float-tile" style={{ top: 20, left: 30, fontSize: 44 }}>📚</span>
-          <span className="float-tile" style={{ bottom: 24, right: 40, fontSize: 40 }}>✏️</span>
           <span className="eyebrow" style={{ color: "#fff" }}>Start today · it's free</span>
           <h2 style={{ marginTop: 14 }}>Give your readers the practice they deserve.</h2>
           <p>Download lessons and decodable stories as print-ready PDFs. No account, no fees — just open materials any adult can use.</p>
