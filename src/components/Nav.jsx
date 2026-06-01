@@ -30,6 +30,7 @@ export default function Nav({ active, onNav }) {
   const go = (id) => { setDrawer(false); onNav(id); };
 
   return (
+    <>
     <header className="nav" style={{ ...(scrolled ? { boxShadow: "0 6px 0 -3px rgba(33,26,20,.18)" } : null), backgroundColor: "rgb(225, 244, 247)" }}>
       <div className="wrap nav__inner">
         <a className="nav__logo" href="#top" onClick={(e) => { e.preventDefault(); go("top"); }}>
@@ -64,6 +65,7 @@ export default function Nav({ active, onNav }) {
           <span></span><span></span><span></span>
         </button>
       </div>
+      </header>
 
       <div className={"drawer" + (drawer ? " open" : "")}>
         <div className="drawer__scrim" onClick={() => setDrawer(false)}></div>
@@ -85,6 +87,6 @@ export default function Nav({ active, onNav }) {
             href="#stories" onClick={(e) => { e.preventDefault(); go("stories"); }}>Get materials</a>
         </div>
       </div>
-    </header>
+    </>
   );
 }
