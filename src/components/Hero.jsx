@@ -66,7 +66,7 @@ export function Hero({ onNav }) {
           </div>
           <div className="hero__trust">
             <span className="pill-free">✓ No sign-up</span>
-            <span>Downloadable PDFs · <b>print &amp; go</b> · used in 1,200+ classrooms</span>
+            <span>Download <b>PDFs &amp; Audio</b></span>
           </div>
         </div>
 
