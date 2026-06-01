@@ -397,11 +397,11 @@ h1, h2, h3 { font-family: var(--ff-display); font-weight: 800; line-height: 1.04
 .endorse { position: relative; }
 .quote {
   background: var(--card); border: 3px solid var(--ink); border-radius: 26px; box-shadow: var(--shadow-soft);
-  padding: 48px clamp(28px,5vw,64px); position: relative;
+  padding: 56px clamp(28px,5vw,64px) 48px; position: relative; text-align: center;
 }
-.quote__mark { font-family: var(--ff-display); font-weight: 800; font-size: 110px; line-height: .6; color: var(--gold); position: absolute; top: 26px; left: 26px; opacity: .4; }
+.quote__mark { font-family: var(--ff-display); font-weight: 800; font-size: 110px; line-height: .6; color: var(--gold); position: absolute; top: 24px; left: 50%; transform: translateX(-50%); opacity: .4; }
 .quote p { font-family: var(--ff-display); font-weight: 600; font-size: clamp(20px, 2.5vw, 28px); line-height: 1.35; letter-spacing: -.01em; position: relative; z-index: 1; }
-.quote__by { display: flex; align-items: center; gap: 14px; margin-top: 26px; }
+.quote__by { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 26px; text-align: left; }
 .quote__av { width: 56px; height: 56px; flex: none; display: block; border-radius: 50%; object-fit: cover; border: 2.5px solid var(--ink); box-shadow: 0 3px 0 var(--ink); background: var(--paper-deep); }
 .quote__by b { display: block; font-size: 16px; }
 .quote__by span { font-size: 14px; color: var(--ink-soft); }
